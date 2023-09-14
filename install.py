@@ -1,8 +1,8 @@
-import launch
+import sus
 
-if not launch.is_installed("rembg"):
-    launch.run_pip("install rembg==2.0.38 --no-deps", "rembg")
+if not sus.is_installed("rembg"):
+    sus.run_pip("install rembg==2.0.38 --no-deps", "rembg")
 
 for dep in ['onnxruntime', 'pymatting', 'pooch']:
-    if not launch.is_installed(dep):
-        launch.run_pip(f"install {dep}", f"{dep} for REMBG extension")
+    if not sus.is_installed(dep):
+        sus.run_pip(f"install {dep}", f"{dep} for REMBG extension")
